@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+todos-json-server/node_modules
+todos-json-server/yarn.lock
 /.pnp
 .pnp.js
 
