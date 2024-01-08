@@ -1,0 +1,43 @@
+{
+  "todos": [
+    {
+      "text": "Learn HTML5",
+      "status": "pending",
+      "todoId": 1
+    },
+    {
+      "text": "Learn CSS3",
+      "status": "pending",
+      "todoId": 2
+    },
+    {
+      "text": "Learn Modern Javascript",
+      "status": "pending",
+      "todoId": 3
+    },
+    {
+      "text": "Learn React JS",
+      "status": "pending",
+      "todoId": 4
+    },
+    {
+      "text": "Learn redux",
+      "status": "pending",
+      "todoId": 5
+    },
+    {
+      "text": "Learn Next JS",
+      "status": "pending",
+      "todoId": 6
+    },
+    {
+      "text": "Study system design",
+      "status": "pending",
+      "todoId": 7
+    }
+  ],
+  "filters": {
+    "status": "All",
+    "color": []
+  }
+}
