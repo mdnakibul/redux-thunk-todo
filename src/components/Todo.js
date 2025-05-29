@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/images/cancel.png";
-import { deleteTodo, updatecolorOfTodo } from "../redux/todo/actions";
+import { deleteTodo } from "../redux/todo/actions";
 import completeATodoThunk from "../redux/thunk/completeATodo";
 import IncompleteATodoThunk from "../redux/thunk/incompleteATodo";
+import updateColorOfTodoThunk from "../redux/thunk/updateColorOfTodo";
 
 export default function Todo({ todo }) {
     const dispatch = useDispatch()
@@ -20,7 +21,7 @@ export default function Todo({ todo }) {
     }
 
     const handleUpdateColor = (color) => {
-        dispatch(updatecolorOfTodo({ id, color }))
+        dispatch(updateColorOfTodoThunk({ id, color }))
     }
     return (
         <div className="flex justify-start items-center p-2 hover:bg-gray-100 hover:transition-all space-x-4 border-b border-gray-400/20 last:border-0">
