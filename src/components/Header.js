@@ -3,7 +3,8 @@ import tickImage from "../assets/images/double-tick.png";
 import noteImage from "../assets/images/notes.png";
 import plusImage from "../assets/images/plus.png";
 import { useDispatch } from "react-redux";
-import { addTodo, clearCompletedTodo, completeAllTodo } from "../redux/todo/actions";
+import { clearCompletedTodo, completeAllTodo } from "../redux/todo/actions";
+import addTodoThunk from "../redux/thunk/addTodo";
 
 export default function Header() {
     const dispatch = useDispatch()
@@ -22,7 +23,7 @@ export default function Header() {
     const handleSubmit = (e) => {
         e.preventDefault()
         document.getElementById('todo-form').reset()
-        dispatch(addTodo(todoFormData))
+        dispatch(addTodoThunk(todoFormData))
     }
 
     const handleCompleteAllTask = () => {
