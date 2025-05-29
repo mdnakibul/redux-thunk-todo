@@ -34,11 +34,6 @@
       "text": "Study system design",
       "status": "completed",
       "id": 7
-    },
-    {
-      "text": "test todo",
-      "status": "pending",
-      "id": 8
     }
   ],
   "filters": {
