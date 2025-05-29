@@ -1,15 +1,15 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/images/cancel.png";
-import { deleteTodo } from "../redux/todo/actions";
 import completeATodoThunk from "../redux/thunk/completeATodo";
 import IncompleteATodoThunk from "../redux/thunk/incompleteATodo";
 import updateColorOfTodoThunk from "../redux/thunk/updateColorOfTodo";
+import deleteTodoThunk from "../redux/thunk/deleteATodo";
 
 export default function Todo({ todo }) {
     const dispatch = useDispatch()
     const { text, status, id, color } = todo
     const handleDeleteTodo = () => {
-        dispatch(deleteTodo({ id }))
+        dispatch(deleteTodoThunk({ id }))
     }
 
     const handleCompleteTodo = (e) => {
