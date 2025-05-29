@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import cancelImage from "../assets/images/cancel.png";
-import { completeATodo, deleteTodo, incompleteATodo, updatecolorOfTodo } from "../redux/todo/actions";
+import { deleteTodo, incompleteATodo, updatecolorOfTodo } from "../redux/todo/actions";
+import completeATodoThunk from "../redux/thunk/completeATodo";
 
 export default function Todo({ todo }) {
     const dispatch = useDispatch()
@@ -11,7 +12,7 @@ export default function Todo({ todo }) {
 
     const handleCompleteTodo = (e) => {
         if (status === 'pending') {
-            dispatch(completeATodo({ id }))
+            dispatch(completeATodoThunk({ id }))
         } else {
             dispatch(incompleteATodo({ id }))
         }
