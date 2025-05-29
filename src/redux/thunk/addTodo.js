@@ -11,7 +11,7 @@ const addTodoThunk = (todoInput) => {
         });
         const todo = await response.json();
 
-        dispatch(addTodo(todo.text));
+        dispatch(addTodo(todo));
     };
 }
 
