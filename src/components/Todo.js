@@ -4,21 +4,21 @@ import { completeATodo, deleteTodo, incompleteATodo, updatecolorOfTodo } from ".
 
 export default function Todo({ todo }) {
     const dispatch = useDispatch()
-    const { text, status, todoId, color } = todo
+    const { text, status, id, color } = todo
     const handleDeleteTodo = () => {
-        dispatch(deleteTodo({ todoId }))
+        dispatch(deleteTodo({ id }))
     }
 
     const handleCompleteTodo = (e) => {
         if (status === 'pending') {
-            dispatch(completeATodo({ todoId }))
+            dispatch(completeATodo({ id }))
         } else {
-            dispatch(incompleteATodo({ todoId }))
+            dispatch(incompleteATodo({ id }))
         }
     }
 
     const handleUpdateColor = (color) => {
-        dispatch(updatecolorOfTodo({ todoId, color }))
+        dispatch(updatecolorOfTodo({ id, color }))
     }
     return (
         <div className="flex justify-start items-center p-2 hover:bg-gray-100 hover:transition-all space-x-4 border-b border-gray-400/20 last:border-0">
