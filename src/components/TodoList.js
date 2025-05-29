@@ -29,7 +29,7 @@ export default function TodoList() {
                         return filters.color.includes(singleTodo?.color)
                     }
                     return true;
-                }).map(todo => <Todo todo={todo} key={todo.todoId} />)
+                }).map(todo => <Todo todo={todo} key={todo.id} />)
             }
         </div>
     );
