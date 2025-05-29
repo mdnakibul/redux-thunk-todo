@@ -1,9 +1,12 @@
-import { ADD_TODO, CLEAR_COMPLETED_TODO, COMPLETE_ALL_TODO, COMPLETE_A_TODO, DELETE_TODO, INCOMPLETE_A_TODO, UPDATE_COLOR_OF_TODO } from "./actionTypes";
+import { ADD_TODO, CLEAR_COMPLETED_TODO, COMPLETE_ALL_TODO, COMPLETE_A_TODO, DELETE_TODO, INCOMPLETE_A_TODO, TODO_LOADED, UPDATE_COLOR_OF_TODO } from "./actionTypes";
 
 const initialTodoState = []
 
 const todoReducer = (state = initialTodoState, action) => {
     switch (action.type) {
+        case TODO_LOADED:
+            return [...action.payload]
+
         case ADD_TODO:
             const lastTodoId = state[state.length - 1]?.todoId || 0
             return [...state, { ...action.payload, todoId: lastTodoId + 1 }]
